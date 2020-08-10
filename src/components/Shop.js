@@ -30,7 +30,7 @@ class Shop extends React.Component {
       console.log(`baught ${item}`);
       this.props.changePumpkins(-price);
       this.props.changePumpkinsPerSecond(pps)
-      this.setState({[item]: this.state[item] + 1});
+      this.setState(() => ({[item]: this.state[item] + 1}));
     }
   }
 

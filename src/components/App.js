@@ -22,13 +22,13 @@ class App extends React.Component {
   }
 
   changePumpkins = (value = this.state.pumpkinsPerSecond) => {
-    this.setState({
+    this.setState(() => ({
       pumpkins: this.state.pumpkins + value,
-    });
+    }));
   }
  
   changePumpkinsPerSecond = (value) => {
-    this.setState({pumpkinsPerSecond: this.state.pumpkinsPerSecond + value})
+    this.setState(() => ({pumpkinsPerSecond: this.state.pumpkinsPerSecond + value}))
   }
 
   componentDidUpdate(prevProps, prevState) {
